@@ -1,6 +1,6 @@
 class CreateRecipes < ActiveRecord::Migration
   def self.up
-    create_table :recipes do |t|
+    create_table :recipes, :options => 'ENGINE=InnoDB DEFAULT CHARSET=utf8' do |t|
       t.string :name
       t.text :procedure
       t.timestamps

@@ -6,9 +6,9 @@ class CreateRecipes < ActiveRecord::Migration
       t.timestamps
     end
     
-    FasterCSV.foreach("#{RAILS_ROOT}/lib/tasks/drinks.csv") do |row|
-      Recipe.create(:name => row[0], :procedure => row[row.size-1])
-    end
+#    FasterCSV.foreach("#{RAILS_ROOT}/lib/tasks/drinks.csv") do |row|
+#      Recipe.create(:name => row[0], :procedure => row[row.size-1])
+#    end
   end
 
   def self.down

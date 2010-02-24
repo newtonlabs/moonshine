@@ -7,7 +7,7 @@ body {/*background-image:url(../images/header.jpg)*/ background-color:#070709}
 h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.5em; color:#330033;}
 .clear {clear: both;}
 
-#wrapper {width: 960px; margin: 0 auto; background-color: #070709; border-left: 2px solid #727274; border-right: 2px solid #727274; border-top:2px solid #727274; }
+#wrapper {width: 960px; margin: 0 auto; background-color: #070709; border: 2px solid #727274; }
 #banner_top {background-image:url(../images/header2.jpg); margin: 0; height: 279px;}
 #search_wrap {float:right; height: 25px; width: 330px; margin: 200px 10px 0 0;}
 
@@ -53,4 +53,4 @@ ul#topnav span{ /*--Default state of navigation--*/
 
 #bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 960px;}
 
-#footer {background-image: url(../images/footer.jpg); height: 36px; width: 960px;}
+#footer {background-image: url(../images/footer.jpg); background-repeat:no-repeat; height: 36px; width: 960px; margin: 0 0 20px 0;}

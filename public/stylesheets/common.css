@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Gloabal */
+
+body {/*background-image:url(../images/header.jpg)*/ background-color:#070709}
+h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.5em; color:#330033;}
+.clear {clear: both;}
+
+#wrapper {width: 960px; margin: 0 auto; background-color: #070709; border-left: 2px solid #727274; border-right: 2px solid #727274; border-top:2px solid #727274; }
+#banner_top {background-image:url(../images/header2.jpg); margin: 0; height: 279px;}
+#search_wrap {float:right; height: 25px; width: 330px; margin: 200px 10px 0 0;}
+
+
+ul#topnav {
+	margin: 15px 0 0 60px;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font-size: 1em;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+ul#topnav li{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;  /*--Important - Masking out the hover state by default--*/
+	float: left;
+	height:40px;
+}
+
+
+ul#topnav a, ul#topnav span { /*--The <a> and <span> share the same properties since the <span>  will be a duplicate of the <a> tag--*/
+	padding: 10px 19.05px;
+	float: left;
+	text-decoration: none;
+	color: #fff;
+	background: url(../images/a_bg.gif) repeat-x;
+	clear: both;
+	width: 100%;
+	height: 20px;
+	line-height: 20px; /*--Vertical alignment of text--*/
+}
+
+ul#topnav span .active {color: #FFFF00; }
+
+ul#topnav a{ /*--This is basically the hover state of navigation--*/
+	color: #555;
+	background-position: left bottom;
+}
+ul#topnav span{ /*--Default state of navigation--*/
+	background-position: left top;
+}
+
+#bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 960px;}
+
+#footer {background-image: url(../images/footer.jpg); height: 36px; width: 960px;}

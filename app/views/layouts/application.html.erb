@@ -1,11 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Search Results</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript"src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+    <title>Off the Shelf</title>
+    <%= javascript_include_tag 'jquery-1.3.2.min.js' %>
+    <%= javascript_include_tag 'application.js' %>
+    
+    <%= stylesheet_link_tag 'common' %>
   </head>
-  <body>
-    Hello moonshine!
+<body>
+    <div id="wrapper">
+    	<div id="banner_top">
+        <div id="search_wrap">
+    			<input id="TextBoxSearch" type="text" name="TextBoxSearch"/>
+          <input id="ImageButtonSearch" type="button" value="Find a Drink" class=				"search_button"/>
+        </div><!--end search wrap-->
+     <div class="clear"></div>
+      <ul id="topnav">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Top Voted</a></li>
+        <li><a href="#">Recently Added</a></li>
+        <li><a href="#">View By Ingredient</a></li>
+        <li><a href="#">My Stuff</a></li>
+        <!--<li><a href="#">Add New Drink</a></li>-->
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+      </div><!--end banner top-->
+    <div id="clear"></div>
+    <div id="bottom_bg">  
+    </div><!--end bottom_bg--> 
+    <div id="footer"></div><!--end footer-->
+    </div><!--end wrapper-->
     <%=yield%>
   </body>
 </html>

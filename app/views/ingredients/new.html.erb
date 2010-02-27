@@ -1,0 +1,15 @@
+<h1>New ingredient</h1>
+
+<% form_for(@ingredient) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+     <%= f.text_field :name, :autocomplete =>"off" %> 
+  </p>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', ingredients_path %>

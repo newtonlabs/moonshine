@@ -1,4 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :ingredients, 
+    :collection => { :auto_complete_for_ingredient_name => :get}
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

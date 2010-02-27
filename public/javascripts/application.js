@@ -20,6 +20,6 @@ $(document).ready(function() {
 			marginTop: "0" //Move the span back to its original state (0px)
 		}, 250);
 	});
-	
-	
+
+  $("input#ingredient_name").autocomplete("ingredients/auto_complete_for_ingredient_name")
 });

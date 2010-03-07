@@ -1,5 +1,9 @@
 class IngredientsController < ApplicationController
-  auto_complete_for :ingredient, :name
+
+  def auto_complete_for_ingredient_name
+    render :text => Ingredient.auto_complete_find(params[:q]).join("\n")
+  end
+
   # GET /ingredients
   # GET /ingredients.xml
   def index

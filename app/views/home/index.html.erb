@@ -1,8 +1,9 @@
 <div id="wrapper">
     	<div id="banner_top">
         <div id="search_wrap">
-    			<input id="TextBoxSearch" type="text" name="TextBoxSearch"/>
-          <input id="ImageButtonSearch" type="button" value="Find a Drink" class=				"search_button"/>
+          <% form_for(@ingredient) do |f| %>
+            <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 
+          <% end %>
         </div><!--end search wrap-->
      <div class="clear"></div>
      <div id="nav">

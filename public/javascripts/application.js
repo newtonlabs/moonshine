@@ -21,5 +21,5 @@ $(document).ready(function() {
 		}, 250);
 	});
 
-  $("input#ingredient_name").autocomplete("ingredients/auto_complete_for_ingredient_name")
+  $("input#ingredient_name").autocomplete("/ingredients/auto_complete_for_ingredient_name")
 });

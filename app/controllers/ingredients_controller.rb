@@ -1,7 +1,7 @@
 class IngredientsController < ApplicationController
 
   def auto_complete_for_ingredient_name
-    render :json => Ingredient.auto_complete_find(params[:q])
+    render :text => Ingredient.auto_complete_find(params[:q]).to_json
     #render :json => "[ {'ingredient': {'text':'Link A', url:'/page1'}}, {ingredient: {text:'Link B', url: '/page2'}} ]"
     #render :text => "[ ['Link A', '/page1'], ['Link B', '/page2'] ]"
     #render :text => Ingredient.auto_complete_find(params[:q]).map{|x| x.name}.join("\n")

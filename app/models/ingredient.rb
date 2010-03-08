@@ -3,5 +3,5 @@ class Ingredient < ActiveRecord::Base
     all(:conditions => [ "name LIKE ?", '%' + name.downcase + '%' ], 
       :order => "name ASC",
       :limit => 10)
-   end
+  end
 end

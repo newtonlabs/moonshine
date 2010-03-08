@@ -20,15 +20,21 @@ $(document).ready(function() {
 		}, 250);
 	});
   
-  //$("input#ingredient_name").autocomplete("/ingredients/auto_complete_for_ingredient_name");
-  //  $("input#ingredient_name  ").autocomplete(data, {
-  //  var data = [ {"ingredient": {"text":'Link A', url:'/page1'}}, {ingredient: {text:'Link B', url: '/page2'}} ];
-  // $("input#ingredient_name").autocomplete(ingredients, {
   $("input#ingredient_name").autocomplete("/ingredients/auto_complete_for_ingredient_name", {
-    formatItem: function(item) {
-      return eval(item).ingredient.name;
-    }
-  }).result(function(event, item) {
-    location.href = "ingredients/" + eval(item).ingredient.id;
-  });
+     dataType: 'json',
+     parse: function(data) {
+       return $.map(data, function(row) {        
+         return {
+           data: row.ingredient,
+           value: row.ingredient.name
+         }
+       });
+     },
+     formatItem: function(item) {
+       return item.name;
+     }
+   }).result(function(e, item) {
+     		$("#content").append("<p>" + item.name + "</p>");
+   });
+  
 });

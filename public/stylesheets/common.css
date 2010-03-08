@@ -29,7 +29,6 @@ ul#topnav li{
 	float: left;
 	height:39px;
 }
-ul {color: #fff;}
 
 
 ul#topnav a, ul#topnav span { /*--The <a> and <span> share the same properties since the <span>  will be a duplicate of the <a> tag--*/

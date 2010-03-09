@@ -25,8 +25,8 @@ $(document).ready(function() {
      parse: function(data) {
        return $.map(data, function(row) {        
          return {
-           data: row.ingredient,
-           value: row.ingredient.name
+           data: row,
+           value: row.name
          }
        });
      },

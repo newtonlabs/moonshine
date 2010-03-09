@@ -19,43 +19,22 @@ $(document).ready(function() {
 			marginTop: "0" //Move the span back to its original state (0px)
 		}, 250);
 	});
-	
-	function mapJsonData(data) {
-	  return $.map(data, function(row) {        
-      return {
-        data: row.ingredient,
-        value: row.ingredient.name
-      }
-    });
-	}
-	
-	function format(item) {
-	  return item.name
-	}
-	
-	function onIngredientSelect(e,item) {
-	  $("#content").append("<p>" + format(item) + "</p>");
-	}
-	
+  
   $("input#ingredient_name").autocomplete("/ingredients/auto_complete_for_ingredient_name", {
      dataType: 'json',
      parse: function(data) {
-<<<<<<< HEAD:public/javascripts/application.js
-       return mapJsonData(data)
-=======
        return $.map(data, function(row) {        
          return {
            data: row,
            value: row.name
          }
        });
->>>>>>> cdef1b9d56566d256740df5b8851ee6a1ecf0a53:public/javascripts/application.js
      },
      formatItem: function(item) {
-       return format(item)
+       return item.name;
      }
    }).result(function(e, item) {
-     onIngredientSelect(e,item)
+     		$("#content").append("<p>" + item.name + "</p>");
    });
   
 });

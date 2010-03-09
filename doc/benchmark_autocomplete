@@ -1,0 +1,64 @@
+FOR CONTROLLER
+
+Concurrency Level:      10
+Time taken for tests:   2.690040 seconds
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      59870 bytes
+HTML transferred:       29900 bytes
+Requests per second:    37.17 [#/sec] (mean)
+Time per request:       269.004 [ms] (mean)
+Time per request:       26.900 [ms] (mean, across all concurrent requests)
+Transfer rate:          21.56 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   91  91.1     80     370
+Processing:    20  161  88.5    150     380
+Waiting:        0  142  92.6    130     350
+Total:         40  253  88.2    240     390
+
+Percentage of the requests served within a certain time (ms)
+  50%    240
+  66%    300
+  75%    310
+  80%    350
+  90%    380
+  95%    380
+  98%    380
+  99%    390
+ 100%    390 (longest request)
+
+
+
+FOR RAILS METAL
+Concurrency Level:      10
+Time taken for tests:   1.90017 seconds
+Complete requests:      100
+Failed requests:        0
+Write errors:           0
+Total transferred:      121100 bytes
+HTML transferred:       101900 bytes
+Requests per second:    91.74 [#/sec] (mean)
+Time per request:       109.002 [ms] (mean)
+Time per request:       10.900 [ms] (mean, across all concurrent requests)
+Transfer rate:          108.26 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0   52  36.8     50     130
+Processing:    10   53  33.9     50     140
+Waiting:        0   42  32.5     40     130
+Total:         70  105  26.9    110     170
+
+Percentage of the requests served within a certain time (ms)
+  50%    110
+  66%    120
+  75%    130
+  80%    130
+  90%    140
+  95%    140
+  98%    170
+  99%    170
+ 100%    170 (longest request)

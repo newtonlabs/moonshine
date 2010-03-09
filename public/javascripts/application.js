@@ -40,7 +40,16 @@ $(document).ready(function() {
   $("input#ingredient_name").autocomplete("/ingredients/auto_complete_for_ingredient_name", {
      dataType: 'json',
      parse: function(data) {
+<<<<<<< HEAD:public/javascripts/application.js
        return mapJsonData(data)
+=======
+       return $.map(data, function(row) {        
+         return {
+           data: row,
+           value: row.name
+         }
+       });
+>>>>>>> cdef1b9d56566d256740df5b8851ee6a1ecf0a53:public/javascripts/application.js
      },
      formatItem: function(item) {
        return format(item)

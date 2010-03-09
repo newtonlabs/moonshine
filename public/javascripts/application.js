@@ -19,8 +19,12 @@ $(document).ready(function() {
 			marginTop: "0" //Move the span back to its original state (0px)
 		}, 250);
 	});
+	
+	function onIngredientAdd (e, item) {
+	  	$("#content").append("<p>" + item.name + "</p>");
+	}
   
-  $("input#ingredient_name").autocomplete("/ingredients/auto_complete_for_ingredient_name", {
+  $("input#ingredient_name").autocomplete("/ingredients/autocomplete", {
      dataType: 'json',
      parse: function(data) {
        return $.map(data, function(row) {        
@@ -34,7 +38,7 @@ $(document).ready(function() {
        return item.name;
      }
    }).result(function(e, item) {
-     		$("#content").append("<p>" + item.name + "</p>");
+     	onIngredientAdd(e,item);
    });
   
 });

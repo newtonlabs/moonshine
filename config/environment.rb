@@ -16,7 +16,6 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  config.gem 'json', :version => '1.2.3'
   config.gem "fastercsv", :version => '1.5.1', :lib => 'fastercsv'
   config.gem 'rack', :version => "1.0.1"  # 1.1.1 doesnt play nice with rails 2.3.5
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"

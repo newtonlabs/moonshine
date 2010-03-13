@@ -3,11 +3,11 @@
 
 /* Gloabal */
 
-body {/*background-image:url(../images/header.jpg)*/ background-color:#070709}
+body {/*background-image:url(../images/header.jpg)*/ background-color:#070709; font-family: Verdana, Arial, Helvetica, sans-serif;}
 h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.5em; color:#330033;}
 .clear {clear: both;}
 
-#wrapper {width: 960px; margin: 0 auto; background-color: #070709; border: 2px solid #727274; }
+#wrapper {width: 990px; margin: 0 auto; background-color: #070709; border: 2px solid #727274; }
 #banner_top {background-image:url(../images/header2.jpg); margin: 0; height: 279px;}
 #search_wrap {float:right; height: 25px; width: 330px; margin: 200px 10px 0 0;}
 
@@ -52,6 +52,17 @@ ul#topnav a{ /*--This is basically the hover state of navigation--*/
 ul#topnav span{ /*--Default state of navigation--*/
 	background-position: left top;
 }
+
+#ingredients {color: #FFFFFF; width: 900px;}
+#ingredients p { background:#000000;
+		width: 150px;
+		height: 20px;
+    padding:10px;
+		margin: 5px 5px 3px 65px;
+		float: left;
+		outline: 1px solid gray;
+}
+
 
 #bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 960px;}
 

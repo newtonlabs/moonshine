@@ -24,14 +24,12 @@ $(document).ready(function() {
 	function addRecipes () {
     $.get("/recipes.js",ing_ids, function(recipes) {
       $("#recipes").empty();
-      $.each(eval(recipes), function(i, recipe) {
-        $("#recipes").append("<p>" + recipe.name +"</p>");
-      })
+      $("#recipes").append(recipes);
     })
 	}
 	
 	function addIngredient (e, item) {
-	  $("#ingredients").append("<p>" + item.name +"</p>");
+	  $("#ingredients").append("<li>" + item.name +"</li>");
 	  ing_ids = ing_ids + "ingredients[]=" + item.id + "&";
 	}
 	

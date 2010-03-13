@@ -2,10 +2,10 @@
 
 <ul>
   <% @recipes.each do |recipe| %>
-  <li> <%= recipe.name %> - <%= recipe.procedure %> </li>
+    <%= render :partial => "recipe", :locals => { :recipe => recipe } %>
   <%end%>
 </ul>
 
-</div><!--end wrapper-->
+</div>
 
 

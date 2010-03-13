@@ -2,6 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
+  var ing_ids = ""; // bad hack will refactor later - thomas
 	
 	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
 	
@@ -20,11 +21,21 @@ $(document).ready(function() {
 		}, 250);
 	});
 	
-	function onIngredientAdd (e, item) {
-	  	$("#content").append("<p>" + item.name + "</p>");
+	function addRecipes () {
+    $.get("/recipes.js",ing_ids, function(recipes) {
+      $("#recipes").empty();
+      $.each(eval(recipes), function(i, recipe) {
+        $("#recipes").append("<p>" + recipe.name +"</p>");
+      })
+    })
 	}
-  
-  $("input#ingredient_name").autocomplete("/ingredients/autocomplete", {
+	
+	function addIngredient (e, item) {
+	  $("#ingredients").append("<p>" + item.name +"</p>");
+	  ing_ids = ing_ids + "ingredients[]=" + item.id + "&";
+	}
+	
+  $("#ingredient_name").autocomplete("/ingredients/autocomplete", {
      dataType: 'json',
      parse: function(data) {
        return $.map(data, function(row) {        
@@ -38,7 +49,9 @@ $(document).ready(function() {
        return item.name;
      }
    }).result(function(e, item) {
-     	onIngredientAdd(e,item);
+     $("#ingredient_name").attr("value","");
+     addIngredient(e,item);
+     addRecipes();
    });
   
 });

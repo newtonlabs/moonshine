@@ -18,7 +18,7 @@ recipe = ""
 #ie = Watir::IE.new
 #while line = reader.gets
 File.open("drinks.csv",'a') do |f|
-  for index in 66..100
+  for index in 1..100
     ie = Watir::IE.new
     drinks_url = ""
     test_site = "http://www.webtender.com/db/drink/"
@@ -41,7 +41,7 @@ File.open("drinks.csv",'a') do |f|
            #p "Quantity before #{qty}"
            qty = qty[0, (qty.length - ingredient.length)]
            recipe+= qty
-           RecipesIngredient.create(:recipe_id => recipe_obj, :ingredient_id => ingredient_obj, :quantity => qty)
+           RecipesIngredient.create(:recipe_id => recipe_obj.id, :ingredient_id => ingredient_obj.id, :quantity => qty).inspect
            recipe+= ","
            recipe+= ingredient
            recipe+=","

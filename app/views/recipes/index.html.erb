@@ -1,11 +1,9 @@
 <div id="wrapper">
-
-<ul>
-  <% @recipes.each do |recipe| %>
-    <%= render :partial => "recipe", :locals => { :recipe => recipe } %>
-  <%end%>
-</ul>
-
+  <ul>
+    <% @recipes.each do |recipe| %>
+      <%= render :partial => "recipe", :locals => { :recipe => recipe } %>
+    <%end%>
+  </ul> 
 </div>
 
 

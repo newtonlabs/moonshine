@@ -28,16 +28,12 @@ $(document).ready(function() {
 	}
 	
 	function addIngredient (e, item) {
-	  $("#ingredients").append('<li> <a href="#" class="ingredient_id">x</a> ' + item.name +'</li>');
+	  $("#ingredients").append('<li> <a href="#">x</a> ' + item.name +'</li>');
 	  ing_ids = ing_ids + "ingredients[]=" + item.id + "&";
-	  $("a.ingredient_id").click(function() {
+	  $("ul#ingredients li > a").click(function() {
 	    $(this).parent().remove();
 	  })
 	}
-	
-	$("a.ingredient_id").click(function() {
-	  alert($(this).html);
-	})
 	
   $("#ingredient_name").autocomplete("/ingredients/autocomplete", {
      dataType: 'json',

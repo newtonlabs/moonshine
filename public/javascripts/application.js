@@ -2,7 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
-  var ing_ids = ""; // bad hack will refactor later - thomas
+  var ing_ids = ""; // O(n) but who really cares, these are small lists
 	
 	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
 	
@@ -21,17 +21,23 @@ $(document).ready(function() {
 		}, 250);
 	});
 	
-	function addRecipes () {
+	function calculateRecipes () {
     $.get("/recipes.js",ing_ids, function(recipes) {
-      $("#recipes").empty();
-      $("#recipes").append(recipes);
+      $("#recipes").empty().append(recipes);
     })
 	}
 	
 	function addIngredient (e, item) {
-	  $("#ingredients").append("<li>" + item.name +"</li>");
+	  $("#ingredients").append('<li> <a href="#" class="ingredient_id">x</a> ' + item.name +'</li>');
 	  ing_ids = ing_ids + "ingredients[]=" + item.id + "&";
+	  $("a.ingredient_id").click(function() {
+	    $(this).parent().remove();
+	  })
 	}
+	
+	$("a.ingredient_id").click(function() {
+	  alert($(this).html);
+	})
 	
   $("#ingredient_name").autocomplete("/ingredients/autocomplete", {
      dataType: 'json',
@@ -49,7 +55,7 @@ $(document).ready(function() {
    }).result(function(e, item) {
      $("#ingredient_name").attr("value","");
      addIngredient(e,item);
-     addRecipes();
+     calculateRecipes();
    });
   
 });

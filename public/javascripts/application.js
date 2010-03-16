@@ -29,8 +29,8 @@ $(document).ready(function() {
 	}
 	
 	function calculateRecipes () {
-	  ingStr = getParamStr(ingIds);
 	  $("#recipes").empty();
+	  ingStr = getParamStr(ingIds);
 	  if (ingStr != "") {
       $.get("/recipes.js",ingStr, function(recipes) {
         $("#recipes").append(recipes);
@@ -38,20 +38,21 @@ $(document).ready(function() {
     }
 	}
 	
-	function removeIngredient(item) {  
-	  $("ul#ingredients li > a").unbind(); // ewwww need to find a more elegant way, like bind once
-	  $("ul#ingredients li > a").click(function() {
-	    delete ingIds[ingPre + $(this).attr("href")];
-	    $(this).parent().remove();
-	    calculateRecipes();
-	    return false;
-	  })
+	function removeIngredient(ingredient) {
+	  delete ingIds[ingPre + $(ingredient).attr("href")];
+    $(ingredient).parent().remove();  
 	}
 	
 	function addIngredient (e, item) {
 	  $("#ingredients").append('<li> <a href="'+item.id+'">x</a> ' + item.name +'</li>');
 	  ingIds[ingPre + item.id] = ingPre + item.id;
-    removeIngredient();
+    // might use livequery plugin if this grows bigger, fine hack for use case size for now
+  	$("ul#ingredients li > a").unbind(); 
+  	$("ul#ingredients li > a").click(function() {
+      removeIngredient(this);
+      calculateRecipes();
+      return false;
+  	})
 	}
 	
   $("#ingredient_name").autocomplete("/ingredients/autocomplete", {

@@ -60,7 +60,6 @@ $(document).ready(function() {
      selectFirst: true,
      cacheLength: null,
      matchSubset: false,
-
      parse: function(data) {
        return $.map(data, function(row) {        
          return {

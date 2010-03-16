@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   layout 'demo'
   
   def index
-    ing_ids = params[:ingredients]
+    ing_ids = params[:i]
     @recipes = ing_ids ? Recipe.find_recipes_by_ord(ing_ids) : Recipe.all
     
     respond_to do |format|

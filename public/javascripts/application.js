@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   var ingIds = new Array();      // O(n) but I dont really care given ingredient size
-  var ingPre = "ingredients[]="  // formatted Rails array type
+  var ingPre = "i[]="  // formatted Rails array type
 	
 	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
 	
@@ -23,8 +23,8 @@ $(document).ready(function() {
 	});
 	
 	function getParamStr (paramObj) {
-	  pStr = ""; j = 0;  
-	  for (var i in paramObj) {pStr += i + "&"; j++;}
+	  pStr = "";
+	  for (var i in paramObj) {pStr += i + "&"}
 	  return pStr;
 	}
 	

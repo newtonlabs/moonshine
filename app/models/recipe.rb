@@ -11,4 +11,14 @@ class Recipe < ActiveRecord::Base
         :limit => 10
     )
   end
+  
+  def self.find_recipes_by_ord ingredient_ids
+    Recipe.all(:select => "recipes.name, recipes.id",
+        :conditions => ["recipes_ingredients.ingredient_id in (?)", ingredient_ids],
+        :joins => :recipes_ingredients,
+        :group => "recipes.name, recipes.id",
+        :having => ["count(*) >= 1"],
+        :order => ["count(*) DESC"]
+    )
+  end
 end

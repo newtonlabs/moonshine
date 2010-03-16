@@ -2,7 +2,8 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
-  var ing_ids = ""; // O(n) but who really cares, these are small lists
+  var ingIds = new Array();      // O(n) but I dont really care given ingredient size
+  var ingPre = "ingredients[]="  // formatted Rails array type
 	
 	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
 	
@@ -21,18 +22,36 @@ $(document).ready(function() {
 		}, 250);
 	});
 	
+	function getParamStr (paramObj) {
+	  pStr = ""; j = 0;  
+	  for (var i in paramObj) {pStr += i + "&"; j++;}
+	  return pStr;
+	}
+	
 	function calculateRecipes () {
-    $.get("/recipes.js",ing_ids, function(recipes) {
-      $("#recipes").empty().append(recipes);
-    })
+	  ingStr = getParamStr(ingIds);
+	  $("#recipes").empty();
+	  if (ingStr != "") {
+      $.get("/recipes.js",ingStr, function(recipes) {
+        $("#recipes").append(recipes);
+      })
+    }
+	}
+	
+	function removeIngredient(item) {  
+	  $("ul#ingredients li > a").unbind(); // ewwww need to find a more elegant way, like bind once
+	  $("ul#ingredients li > a").click(function() {
+	    delete ingIds[ingPre + $(this).attr("href")];
+	    $(this).parent().remove();
+	    calculateRecipes();
+	    return false;
+	  })
 	}
 	
 	function addIngredient (e, item) {
-	  $("#ingredients").append('<li> <a href="#">x</a> ' + item.name +'</li>');
-	  ing_ids = ing_ids + "ingredients[]=" + item.id + "&";
-	  $("ul#ingredients li > a").click(function() {
-	    $(this).parent().remove();
-	  })
+	  $("#ingredients").append('<li> <a href="'+item.id+'">x</a> ' + item.name +'</li>');
+	  ingIds[ingPre + item.id] = ingPre + item.id;
+    removeIngredient();
 	}
 	
   $("#ingredient_name").autocomplete("/ingredients/autocomplete", {

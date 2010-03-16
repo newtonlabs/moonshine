@@ -57,6 +57,10 @@ $(document).ready(function() {
 	
   $("#ingredient_name").autocomplete("/ingredients/autocomplete", {
      dataType: 'json',
+     selectFirst: true,
+     cacheLength: null,
+     matchSubset: false,
+
      parse: function(data) {
        return $.map(data, function(row) {        
          return {

@@ -58,8 +58,8 @@ ul#topnav span{ /*--Default state of navigation--*/
 #ingredients {color: #FFFFFF; min-height:150px; width:800px;}
 #ingredients li { background:#000000; width: 150px; height: 20px; padding:10px; margin: 5px 5px 3px 5px;
                  float: left; outline: 1px solid gray; list-style-type:none;}
-#recipes {color: #ffffff;}
-
+#recipes {color: #FFFFFF; min-height:150px; width:800px;}
+#recipes li {list-style-type:none;}
 
 #bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 960px;padding: 0 20px 0 65px;}
 

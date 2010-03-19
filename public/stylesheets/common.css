@@ -53,17 +53,18 @@ ul#topnav span{ /*--Default state of navigation--*/
 	background-position: left top;
 }
 
-#ingredients {color: #FFFFFF; width: 900px;}
-#ingredients p { background:#000000;
+#ingredients {color: #FFFFFF; min-height:150px; width:800px;}
+#ingredients li { background:#000000;
 		width: 150px;
 		height: 20px;
-    padding:10px;
-		margin: 5px 5px 3px 65px;
+        padding:10px;
+		margin: 5px 5px 3px 5px;
 		float: left;
 		outline: 1px solid gray;
+		list-style-type:none;
 }
 
 
-#bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 960px;}
+#bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 960px;padding: 0 20px 0 65px;}
 
 #footer {background-image: url(../images/footer.jpg); background-repeat:no-repeat; height: 36px; width: 960px; margin: 0 0 20px 0;}

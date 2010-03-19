@@ -5,6 +5,8 @@
 
 body {/*background-image:url(../images/header.jpg)*/ background-color:#070709; font-family: Verdana, Arial, Helvetica, sans-serif;}
 h1 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.5em; color:#330033;}
+h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.0em; color:#ffffff;}
+
 .clear {clear: both;}
 
 #wrapper {width: 990px; margin: 0 auto; background-color: #070709; border: 2px solid #727274; }
@@ -54,15 +56,9 @@ ul#topnav span{ /*--Default state of navigation--*/
 }
 
 #ingredients {color: #FFFFFF; min-height:150px; width:800px;}
-#ingredients li { background:#000000;
-		width: 150px;
-		height: 20px;
-        padding:10px;
-		margin: 5px 5px 3px 5px;
-		float: left;
-		outline: 1px solid gray;
-		list-style-type:none;
-}
+#ingredients li { background:#000000; width: 150px; height: 20px; padding:10px; margin: 5px 5px 3px 5px;
+                 float: left; outline: 1px solid gray; list-style-type:none;}
+#recipes {color: #ffffff;}
 
 
 #bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 960px;padding: 0 20px 0 65px;}

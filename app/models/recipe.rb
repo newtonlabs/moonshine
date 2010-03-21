@@ -3,7 +3,7 @@ class Recipe < ActiveRecord::Base
   has_many :ingredients, :through => :recipes_ingredients
   
   def self.find_recipes_by ingredient_ids
-    Recipe.all(:select => "recipes.name, recipes.id",
+    Recipe.all(:select => "recipes.name, recipes.quantity, recipes.id",
         :conditions => ["recipes_ingredients.ingredient_id in (?)", ingredient_ids],
         :joins => :recipes_ingredients,
         :group => "recipes.name, recipes.id",
@@ -13,7 +13,7 @@ class Recipe < ActiveRecord::Base
   end
   
   def self.find_recipes_by_ord ingredient_ids
-    Recipe.all(:select => "recipes.name, recipes.id",
+    Recipe.all(:select => "recipes.name, recipes.quantity, recipes.id",
         :conditions => ["recipes_ingredients.ingredient_id in (?)", ingredient_ids],
         :joins => :recipes_ingredients,
         :group => "recipes.name, recipes.id",

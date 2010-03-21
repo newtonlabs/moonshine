@@ -23,13 +23,16 @@ ActiveRecord::Schema.define(:version => 20100321010908) do
     t.binary "instructions"
     t.string "category"
     t.string "glass"
-    t.string "type"
+    t.string "drink_type"
     t.string "keys"
   end
 
   create_table "recipes", :force => true do |t|
     t.string   "name"
     t.text     "procedure"
+    t.text     "quantity"
+    t.string   "glass"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

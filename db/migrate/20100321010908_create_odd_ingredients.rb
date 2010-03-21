@@ -6,10 +6,8 @@ class CreateOddIngredients < ActiveRecord::Migration
       t.binary :instructions
       t.string :category
       t.string :glass
-      t.string :type
+      t.string :drink_type
       t.string :keys
-
-      #t.timestamps
     end
   end
 

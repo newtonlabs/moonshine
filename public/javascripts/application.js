@@ -2,7 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function() {
-  var ingIds = new Array();      // O(n) but I dont really care given ingredient size
+  ingIds = new Array();      // O(n) but I dont really care given ingredient size
   var ingPre = "i[]="  // formatted Rails array type
 	
 	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
@@ -47,6 +47,7 @@ $(document).ready(function() {
 	  $("#ingredients").append('<li> <a href="'+item.id+'">x</a> ' + item.name +'</li>');
 	  ingIds[ingPre + item.id] = ingPre + item.id;
     // might use livequery plugin if this grows bigger, fine hack for use case size for now
+    // TODO see if livequery is part of jquery native
   	$("ul#ingredients li > a").unbind(); 
   	$("ul#ingredients li > a").click(function() {
       removeIngredient(this);

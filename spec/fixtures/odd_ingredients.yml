@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  ingredients: MyText
+  instructions: MyText
+  category: MyString
+  glass: MyString
+  type: MyString
+  keys: MyString
+
+two:
+  name: MyString
+  ingredients: MyText
+  instructions: MyText
+  category: MyString
+  glass: MyString
+  type: MyString
+  keys: MyString

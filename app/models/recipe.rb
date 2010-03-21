@@ -6,7 +6,7 @@ class Recipe < ActiveRecord::Base
     Recipe.all(:select => "recipes.name, recipes.quantity, recipes.id",
         :conditions => ["recipes_ingredients.ingredient_id in (?)", ingredient_ids],
         :joins => :recipes_ingredients,
-        :group => "recipes.name, recipes.id",
+        :group => "recipes.name, recipes.id, recipes.quantity",
         :having => ["count(*) = ?", ingredient_ids.size],
         :limit => 10
     )
@@ -16,7 +16,7 @@ class Recipe < ActiveRecord::Base
     Recipe.all(:select => "recipes.name, recipes.quantity, recipes.id",
         :conditions => ["recipes_ingredients.ingredient_id in (?)", ingredient_ids],
         :joins => :recipes_ingredients,
-        :group => "recipes.name, recipes.id",
+        :group => "recipes.name, recipes.id, recipes.quantity",
         :having => ["count(*) >= 1"],
         :order => ["count(*) DESC"]
     )

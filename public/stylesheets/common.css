@@ -55,7 +55,7 @@ ul#topnav span{ /*--Default state of navigation--*/
 	background-position: left top;
 }
 
-#ingredients {color: #FFFFFF; min-height:150px; width:800px;}
+#ingredients {color: #FFFFFF; min-height:150px; width:800px;margin:10px 0 0 0;}
 #ingredients li { background:#000000; width: 150px; height: 20px; padding:10px; margin: 5px 5px 3px 5px;
                  float: left; outline: 1px solid gray; list-style-type:none;}
 #recipes {color: #FFFFFF; min-height:150px; width:800px;}

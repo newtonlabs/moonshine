@@ -29,7 +29,6 @@ $(document).ready(function() {
 	}
 	
 	function calculateRecipes () {
-	  alert('calculating');
 	  $("#recipes").empty();
 	  ingStr = getParamStr(ingIds);
 	  if (ingStr != "") {

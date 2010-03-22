@@ -29,6 +29,7 @@ $(document).ready(function() {
 	}
 	
 	function calculateRecipes () {
+	  alert('calculating');
 	  $("#recipes").empty();
 	  ingStr = getParamStr(ingIds);
 	  if (ingStr != "") {
@@ -46,10 +47,7 @@ $(document).ready(function() {
 	function addIngredient (e, item) {
 	  $("#ingredients").append('<li> <a href="'+item.id+'">x</a> ' + item.name +'</li>');
 	  ingIds[ingPre + item.id] = ingPre + item.id;
-    // might use livequery plugin if this grows bigger, fine hack for use case size for now
-    // TODO see if livequery is part of jquery native
-  	$("ul#ingredients li > a").unbind(); 
-  	$("ul#ingredients li > a").click(function() {
+  	$("ul#ingredients li > a").live('click', function() {
       removeIngredient(this);
       calculateRecipes();
       return false;

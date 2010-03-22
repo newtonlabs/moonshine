@@ -46,7 +46,7 @@ $(document).ready(function() {
 	function addIngredient (e, item) {
 	  $("#ingredients").append('<li> <a href="'+item.id+'">x</a> ' + item.name +'</li>');
 	  ingIds[ingPre + item.id] = ingPre + item.id;
-  	$("ul#ingredients li > a").live('click', function() {
+  	$("div#ingredients a").live('click', function() {
       removeIngredient(this);
       calculateRecipes();
       return false;

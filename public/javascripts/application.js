@@ -33,7 +33,7 @@ $(document).ready(function() {
 	  ingStr = getParamStr(ingIds);
 	  if (ingStr != "") {
       $.get("/recipes.js",ingStr, function(recipes) {
-        $("#recipes").append(recipes);
+        $("#recipes").append(recipes).hide().fadeIn("slow");
       })
     }
 	}

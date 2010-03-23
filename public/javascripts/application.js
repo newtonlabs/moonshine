@@ -29,11 +29,11 @@ $(document).ready(function() {
 	}
 	
 	function calculateRecipes () {
-	  $("#recipes").fadeOut("6000").empty();
+	  $("#recipes").fadeOut('slow').empty();
 	  ingStr = getParamStr(ingIds);
 	  if (ingStr != "") {
       $.get("/recipes.js",ingStr, function(recipes) {
-        $("#recipes").append(recipes).hide().fadeIn("slow");
+        $("#recipes").append(recipes).hide().fadeIn('slow');
       })
     }
 	}

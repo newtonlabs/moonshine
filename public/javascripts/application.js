@@ -29,7 +29,7 @@ $(document).ready(function() {
 	}
 	
 	function calculateRecipes () {
-	  $("#recipes").empty();
+	  $("#recipes").fadeOut("slow").empty();
 	  ingStr = getParamStr(ingIds);
 	  if (ingStr != "") {
       $.get("/recipes.js",ingStr, function(recipes) {

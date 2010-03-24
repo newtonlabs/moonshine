@@ -17,7 +17,35 @@
   </head>
 
   <body>
-    <%=yield%>
-  </body>
+    <div id="wrapper">
+        	<div id="banner_top">
+            <div id="search_wrap">
+              <% @ingredient = Ingredient.new%>
+              <% form_for(@ingredient) do |f| %>
+                <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 
+              <% end %>
+            </div><!--end search wrap-->
+         <div class="clear"></div>
+         <div id="nav">
+           <ul id="topnav">
+              <li><%= link_to 'Home', :controller=>"home", :action => "index" %></li>
+              <!--<li><a href="#">Top Voted</a></li>
+              <li><a href="#">Recently Added</a></li>
+              <li><a href="#">View By Ingredient</a></li>
+              <li><a href="#">My Stuff</a></li>
+              <li><a href="#">Add New Drink</a></li>-->
+              <li><%= link_to 'About', :controller=>"about", :action=>"index"%></li>
+              <li><%= link_to 'Contact', :controller=>"contact", :action=>"index" %></li>
+           </ul>
+         </div><!--end nav-->
+          </div><!--end banner top-->
+        <div id="clear"></div>
+        <div id="bottom_bg">
+        <%=yield%>
+        </div><!--end bottom_bg--> 
+        <div id="footer"></div><!--end footer-->
 
+      </div><!--end wrapper-->
+        
+  </body>
 </html>

@@ -44,7 +44,7 @@ $(document).ready(function() {
 	}
 	
 	function addIngredient (e, item) {
-	  $("#ingredients").append('<li>' + item.name +' <a href="'+item.id+'">x</a> ' + '</li>');
+	  $("#ingredients").append('<li>' + item.name +' <a class="delete_ingredient" href="'+item.id+'">x</a> ' + '</li>');
 	  ingIds[ingPre + item.id] = ingPre + item.id;
   	$("div#ingredients a").live('click', function() {
       removeIngredient(this);

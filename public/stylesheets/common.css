@@ -55,13 +55,13 @@ ul#topnav span{ /*--Default state of navigation--*/
 	background-position: left top;
 }
 
-#ingredients {color: #FFFFFF; min-height:150px; width:800px;margin:10px 0 0 0;}
+#ingredients {color: #FFFFFF; min-height:50px; width:800px;margin:0 0 0 0;}
 #ingredients li { width: 150px; height: 42px; padding:10px; margin: 5px 5px 3px 5px;
                  float: left; /*outline: 1px solid gray;*/ list-style-type:none; background-image: url(../images/ingredient_bg.jpg); background-repeat:no-repeat;}
 .drink_name {font-weight: bold;}
 #recipes {color: #FFFFFF; min-height:150px; width:800px;}
 #recipes li {list-style-type:none;}
 
-#bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 960px;padding: 0 20px 0 65px;}
+#bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 920px;padding: 0 20px 0 65px;}
 
 #footer {background-image: url(../images/footer.jpg); background-repeat:no-repeat; height: 36px; width: 960px; margin: 0 0 20px 0;}

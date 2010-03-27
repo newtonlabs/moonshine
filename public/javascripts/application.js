@@ -29,7 +29,6 @@ $(document).ready(function() {
 	}
 	
 	function calculateRecipes () {
-	  alert("calculating...")
 	  $("#recipes").empty();
 	  ingStr = getParamStr(ingIds);
 	  if (ingStr != "") {
@@ -40,7 +39,6 @@ $(document).ready(function() {
 	}
 	
 	function removeIngredient(ingredient) {
-	  alert("removing" + $(ingredient).attr("href") )
 	  delete ingIds[ingPre + $(ingredient).attr("href")];
     $(ingredient).parent().remove();  
 	}

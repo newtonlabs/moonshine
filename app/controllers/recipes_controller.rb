@@ -10,4 +10,13 @@ class RecipesController < ApplicationController
       format.js  { render :partial => "recipe", :collection => @recipes  }
     end
   end
+  
+  def show
+    @recipe = Recipe.find(params[:id]) 
+    
+    respond_to do  |format|
+      format.html
+      format.js {render :partial => "full_recipe"}
+    end
+  end
 end

@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   ingIds = new Array();      // O(n) but I dont really care given ingredient size
-  var ingPre = "i[]="  // formatted Rails array type
+  var ingPre = "i[]="       // formatted Rails array type
 	
 	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
 	
@@ -29,7 +29,8 @@ $(document).ready(function() {
 	}
 	
 	function calculateRecipes () {
-	  $("#recipes").fadeOut('slow').empty();
+	  alert("calculating...")
+	  $("#recipes").empty();
 	  ingStr = getParamStr(ingIds);
 	  if (ingStr != "") {
       $.get("/recipes.js",ingStr, function(recipes) {
@@ -39,20 +40,29 @@ $(document).ready(function() {
 	}
 	
 	function removeIngredient(ingredient) {
+	  alert("removing" + $(ingredient).attr("href") )
 	  delete ingIds[ingPre + $(ingredient).attr("href")];
     $(ingredient).parent().remove();  
 	}
 	
+	$("div#ingredients a").live('click', function(e) {
+    removeIngredient(this);
+    calculateRecipes();
+    e.preventDefault();
+	})
+	
 	function addIngredient (e, item) {
 	  $("#ingredients").append('<li>' + item.name +' <a class="delete_ingredient" href="'+item.id+'">x</a> ' + '</li>');
 	  ingIds[ingPre + item.id] = ingPre + item.id;
-  	$("div#ingredients a").live('click', function() {
-      removeIngredient(this);
-      calculateRecipes();
-      return false;
-  	})
 	}
 	
+  $("a.basic-modal").live('click', function(e) {
+    e.preventDefault();
+    $.get("/recipes/"+$(this).attr("name")+".js", function(data){
+      $(data).modal();
+    });
+  });
+  
   $("#ingredient_name").autocomplete("/ingredients/autocomplete", {
      dataType: 'json',
      selectFirst: true,

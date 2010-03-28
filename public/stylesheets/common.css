@@ -59,7 +59,7 @@ ul#topnav span{ /*--Default state of navigation--*/
 #ingredients li { min-width: 75px; height: 25px; padding:10px; margin: 0px 5px 10px 5px;
                  float: left; list-style-type:none; background-image: url(../images/ingredient_bg.jpg); background-repeat:repeat-x; border-style:solid; border-width: 1px;border-color: #575555;}
 #ingredients a {color: #8c1c1c;}
-.drink_name {font-weight: bold; color: #FFFFFF;}
+.drink_name {color: #FFFFFF;}
 #recipes {color: #FFFFFF; min-height:150px; width:800px; padding: 10px 0 0 10px;}
 #recipes li {list-style-type:none;}
 #recipes a {color: #ffffff;}

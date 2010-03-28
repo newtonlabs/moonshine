@@ -55,9 +55,9 @@ ul#topnav span{ /*--Default state of navigation--*/
 	background-position: left top;
 }
 
-#ingredients {color: #FFFFFF; min-height:75px; width:800px;margin:0 0 0 0;}
-#ingredients li { min-width: 150px; min-height: 42px; padding:10px; margin: 5px 5px 3px 5px;
-                 float: left; /*outline: 1px solid gray;*/ list-style-type:none; background-image: url(../images/ingredient_bg.jpg); background-repeat:no-repeat;}
+#ingredients {min-height:75px; width:800px;margin:0 0 0 0;}
+#ingredients li { min-width: 75px; min-height: 25px; padding:10px; margin: 5px 5px 3px 5px;
+                 float: left; list-style-type:none; background-image: url(../images/ingredient_bg.jpg); background-repeat:repeat-x;}
 .drink_name {font-weight: bold;}
 #recipes {color: #FFFFFF; min-height:150px; width:800px;}
 #recipes li {list-style-type:none;}

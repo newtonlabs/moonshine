@@ -63,7 +63,7 @@ $(document).ready(function() {
     });
   });
   
-  $("form").bind("submit", function(e) {
+  $("div#search_wrap form").bind("submit", function(e) {
     e.preventDefault();
   });
   

@@ -1,6 +1,12 @@
 <div class="recipe_card">
   <h3> <%= @recipe.name%> </h3> 
-  <p><%= @recipe.quantity %> </p>
+  <p>
+    <ul>
+    <% @recipe.quantity.split(",").each do |ingredient|  %> 
+      <li><%=ingredient%></li>
+    <% end %>
+    </ul>
+  </p>
   <em> <%= @recipe.glass%> </em>
   <p><%= @recipe.procedure%></p>
 </div>

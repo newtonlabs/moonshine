@@ -50,7 +50,7 @@ $(document).ready(function() {
 	})
 	
 	function addIngredient (e, item) {
-	  $("#ingredients").append('<li>' + item.name +' <a class="delete_ingredient" ingredient_id="'+item.id+'"href="#">x</a> ' + '</li>');
+	  $("#ingredients").append('<li>' + item.name +' <a class="delete_ingredient" ingredient_id="'+item.id+'"href="#">&nbsp;&nbsp;&nbsp;&nbsp;</a> ' + '</li>');
 	  ingIds[ingPre + item.id] = ingPre + item.id;
 	}
 	

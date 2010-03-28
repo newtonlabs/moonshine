@@ -39,7 +39,7 @@ $(document).ready(function() {
 	}
 	
 	function removeIngredient(ingredient) {
-	  delete ingIds[ingPre + $(ingredient).attr("name")];
+	  delete ingIds[ingPre + $(ingredient).attr("ingredient_id")];
     $(ingredient).parent().remove();  
 	}
 	
@@ -50,13 +50,13 @@ $(document).ready(function() {
 	})
 	
 	function addIngredient (e, item) {
-	  $("#ingredients").append('<li>' + item.name +' <a class="delete_ingredient" name="'+item.id+'"href="#">x</a> ' + '</li>');
+	  $("#ingredients").append('<li>' + item.name +' <a class="delete_ingredient" ingredient_id="'+item.id+'"href="#">x</a> ' + '</li>');
 	  ingIds[ingPre + item.id] = ingPre + item.id;
 	}
 	
   $("a.basic-modal").live('click', function(e) {
     e.preventDefault();
-    $.get("/recipes/"+$(this).attr("name")+".js", function(data){
+    $.get("/recipes/"+$(this).attr("recipe_id")+".js", function(data){
       $(data).modal();
     });
   });

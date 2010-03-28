@@ -50,7 +50,7 @@ $(document).ready(function() {
 	})
 	
 	function addIngredient (e, item) {
-	   var addHtml = '<li>' + item.name  + ' <a class="delete_ingredient" ingredient_id="' 
+	  var addHtml = '<li>' + item.name  + ' <a class="delete_ingredient" ingredient_id="' 
 	    + item.id + '"href="#"><div class="remove_ingredient"></div></a> ' + '</li>'
 	  $(addHtml).appendTo("#ingredients ul").hide().fadeIn('slow');
 	  ingIds[ingPre + item.id] = ingPre + item.id;

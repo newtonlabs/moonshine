@@ -10,7 +10,7 @@ OddIngredients.all.each do |odd_recipe|
   
   recipe.ingredients = recipe_ingredients
   recipe.procedure   = odd_recipe.instructions
-  recipe.quantity    = odd_recipe.ingredients.gsub!("\r\n",",")
+  recipe.quantity    = odd_recipe.ingredients.split("\r\n").map{|x| x.strip}.join ", "
   recipe.category    = odd_recipe.category
   recipe.glass       = odd_recipe.glass
   

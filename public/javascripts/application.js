@@ -63,6 +63,10 @@ $(document).ready(function() {
     });
   });
   
+  $("form").bind("submit", function(e) {
+    e.preventDefault();
+  });
+  
   $("#ingredient_name").autocomplete("/ingredients/autocomplete", {
      dataType: 'json',
      selectFirst: true,

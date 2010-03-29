@@ -15,62 +15,30 @@
     <%= stylesheet_link_tag 'common' %>
     <%= stylesheet_link_tag 'jquery.autocomplete.css' %>
     <%= stylesheet_link_tag 'basic.css' %>
-
-
-<script type="text/javascript">
-  var uservoiceOptions = {
-    key: 'newtonlabs',
-    host: 'newtonlabs.uservoice.com', 
-    forum: '48451',
-    alignment: 'left',
-    background_color:'#750000', 
-    text_color: 'white',
-    hover_color: '#9c9c9c',
-    lang: 'en',
-    showTab: true
-  };
-  function _loadUserVoice() {
-    var s = document.createElement('script');
-    s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "uservoice.com/javascripts/widgets/tab.js";
-    document.getElementsByTagName('head')[0].appendChild(s);
-  }
-  _loadSuper = window.onload;
-  window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
-</script>
 <%  end %>
-
-  </head>
-
-  <body>
-    <div id="wrapper">
-        	<div id="banner_top">
-            <div id="search_wrap">
-              <% @ingredient = Ingredient.new%>
-              <% form_for(@ingredient) do |f| %>
-                <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 
-              <% end %>
-            </div><!--end search wrap-->
-         <div class="clear"></div>
-         <div id="nav">
-           <ul id="topnav">
-              <li><%= link_to 'Home', :controller=>"home", :action => "index"   %></li>
-              <!--<li><a href="#">Top Voted</a></li>
-              <li><a href="#">Recently Added</a></li>
-              <li><a href="#">View By Ingredient</a></li>
-              <li><a href="#">My Stuff</a></li>
-              <li><a href="#">Add New Drink</a></li>-->
-              <!--><li><%= link_to 'About', :controller=>"about", :action=>"index"%></li>-->
-              <li><%= link_to 'Contact', :controller=>"contact", :action=>"index" %></li>
-           </ul>
-         </div><!--end nav-->
-          </div><!--end banner top-->
-        <div id="clear"></div>
-        <div id="bottom_bg">
-        <%=yield%>
-        </div><!--end bottom_bg--> 
-        <div id="footer"></div><!--end footer-->
-
-      </div><!--end wrapper-->
-        
-  </body>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="banner_top">
+      <div id="search_wrap">
+        <% @ingredient = Ingredient.new%>
+        <% form_for(@ingredient) do |f| %>
+          <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 
+        <% end %>
+      </div><!--end search wrap-->
+      <div class="clear"></div>
+      <div id="nav">
+        <ul id="topnav">
+          <li><%= link_to 'Home', :controller=>"home", :action => "index"   %></li>
+          <li><%= link_to 'Contact', :controller=>"contact", :action=>"index" %></li>
+        </ul>
+      </div><!--end nav-->
+    </div><!--end banner top-->
+    <div id="clear"></div>
+    <div id="bottom_bg">
+      <%=yield%>
+    </div><!--end bottom_bg--> 
+    <div id="footer"></div><!--end footer-->
+  </div><!--end wrapper-->      
+</body>
 </html>

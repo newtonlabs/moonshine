@@ -1,5 +1,23 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
+var uservoiceOptions = {
+  key: 'newtonlabs',
+  host: 'newtonlabs.uservoice.com', 
+  forum: '48451',
+  alignment: 'left',
+  background_color:'#750000', 
+  text_color: 'white',
+  hover_color: '#9c9c9c',
+  lang: 'en',
+  showTab: true
+};
+function _loadUserVoice() {
+  var s = document.createElement('script');
+  s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "uservoice.com/javascripts/widgets/tab.js";
+  document.getElementsByTagName('head')[0].appendChild(s);
+}
+_loadSuper = window.onload;
+window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
 
 $(document).ready(function() {
   ingIds = new Array();      // O(n) but I dont really care given ingredient size

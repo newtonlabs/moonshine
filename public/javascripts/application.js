@@ -48,7 +48,7 @@ $(document).ready(function() {
 	  for (var i in paramObj) {pStr += i + "&"}
 	  return pStr;
 	}
-	
+  
 	function calculateRecipes () {
 	  $("#recipes").empty();
 	  ingStr = getParamStr(ingIds);

@@ -1,5 +1,7 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
+
+// User Feedback Widget
 var uservoiceOptions = {
   key: 'newtonlabs',
   host: 'newtonlabs.uservoice.com', 
@@ -19,6 +21,7 @@ function _loadUserVoice() {
 _loadSuper = window.onload;
 window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
 
+// App JS
 $(document).ready(function() {
   ingIds = new Array();      // O(n) but I dont really care given ingredient size
   var ingPre = "i[]="       // formatted Rails array type
@@ -60,6 +63,8 @@ $(document).ready(function() {
 	  delete ingIds[ingPre + $(ingredient).attr("ingredient_id")];
     $(ingredient).parent().remove();  
 	}
+	
+	$("#ingredient_name").focus();
 	
 	$("div#ingredients a").live('click', function(e) {
     removeIngredient(this);

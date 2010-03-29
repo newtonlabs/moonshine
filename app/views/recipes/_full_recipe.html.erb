@@ -8,5 +8,5 @@
     </ul>
   </p>
 
-  <img src="images/<%= @recipe.glass.gsub(" ","_") %>.gif"></img>
+  <img src="images/<%= @recipe.glass.gsub(" ","_").downcase %>.gif"></img>
   <p><%= @recipe.procedure%></p>

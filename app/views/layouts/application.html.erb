@@ -15,7 +15,30 @@
     <%= stylesheet_link_tag 'common' %>
     <%= stylesheet_link_tag 'jquery.autocomplete.css' %>
     <%= stylesheet_link_tag 'basic.css' %>
+
+
+<script type="text/javascript">
+  var uservoiceOptions = {
+    key: 'newtonlabs',
+    host: 'newtonlabs.uservoice.com', 
+    forum: '48451',
+    alignment: 'left',
+    background_color:'#750000', 
+    text_color: 'white',
+    hover_color: '#9c9c9c',
+    lang: 'en',
+    showTab: true
+  };
+  function _loadUserVoice() {
+    var s = document.createElement('script');
+    s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "uservoice.com/javascripts/widgets/tab.js";
+    document.getElementsByTagName('head')[0].appendChild(s);
+  }
+  _loadSuper = window.onload;
+  window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+</script>
 <%  end %>
+
   </head>
 
   <body>

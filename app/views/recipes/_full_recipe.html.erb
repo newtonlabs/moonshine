@@ -7,5 +7,6 @@
     <% end %>
     </ul>
   </p>
-  <em> <%= @recipe.glass%> </em>
+
+  <img src="images/<%= @recipe.glass.gsub(" ","_") %>.gif"></img>
   <p><%= @recipe.procedure%></p>

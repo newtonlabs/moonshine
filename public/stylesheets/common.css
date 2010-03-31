@@ -61,8 +61,8 @@ ul#topnav span{ /*--Default state of navigation--*/
                  float: left; list-style-type:none; background-image: url(../images/ingredient_bg.jpg); background-repeat:repeat-x; border-style:solid; border-width: 1px;border-color: #575555;}
 /* #ingredients a {color: #8c1c1c;} */
 /*#ingredients a*/
-.remove_ingredient  {background:url(../images/x.png) no-repeat;  position:relative; left:70px; 
-	bottom:45px; text-decoration: none; z-index: 1000; padding: 15px; height: 20px; width: 20px;}
+.remove_ingredient  {background:url(../images/x.png) no-repeat;  /*position:relative; right:10px; 
+	bottom:45px;*/ float: right; text-decoration: none; z-index: 1000; padding: 15px; height: 20px; width: 20px;}
 
 .drink_name {color: #FFFFFF;}
 #recipes {color: #FFFFFF; min-height:150px; width:800px; padding: 10px 0 0 10px;}

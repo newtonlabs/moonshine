@@ -7,6 +7,10 @@
     <% end %>
     </ul>
   </p>
-  <em> <%= @recipe.glass%> </em>
+
+  <% if @recipe.glass == "Unknown glass type" %>
+    <img src="images/unknown_glass_type.gif"></img>
+  <% else %>
+    <img src="images/<%= @recipe.glass.gsub(" ","_").downcase %>.gif"></img>
+  <% end %>
   <p><%= @recipe.procedure%></p>
-</div>

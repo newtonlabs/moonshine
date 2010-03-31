@@ -69,6 +69,9 @@ ul#topnav span{ /*--Default state of navigation--*/
 #recipes li {list-style-type:none;}
 #recipes a {color: #ffffff;}
 
+.contact_us {color: #FFFFFF; min-height:150px; width:800px; padding: 10px 0 0 10px;}
+.contact_us a {color: #ffffff;}
+
 #bottom_bg {background-image: url(../images/bottom.jpg); background-repeat: repeat-y;  min-height: 300px; width: 920px;padding: 0 20px 0 65px;}
 
 #footer {background-image: url(../images/footer.jpg); background-repeat:no-repeat; height: 36px; width: 960px; margin: 0 0 20px 0;}

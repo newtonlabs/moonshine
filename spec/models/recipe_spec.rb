@@ -16,12 +16,12 @@ describe Recipe do
       r3 = Factory(:recipe, :ingredients => [i1,i2,i3])
       
       r  = Recipe.find_recipes_by [i1.id, i2.id, i3.id]
-      r.size.should == 1
-      
-      r  = Recipe.find_recipes_by [i1.id]
       r.size.should == 3
       
-      r  = Recipe.find_recipes_by [i1.id, i2.id]
+      r  = Recipe.find_recipes_by [i2.id]
+      r.size.should == 2
+      
+      r  = Recipe.find_recipes_by [i3.id, i4.id]
       r.size.should == 2
     end
   end

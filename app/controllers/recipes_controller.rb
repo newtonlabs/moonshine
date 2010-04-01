@@ -6,7 +6,8 @@ class RecipesController < ApplicationController
     
     respond_to do |format|
       format.html
-      format.js  { render :partial => "recipe", :collection => @recipes  }
+      #format.js  { render :partial => "recipe", :collection => @recipes  }
+      format.js { render :partial => "recipe", :object => @recipes}
     end
   end
   

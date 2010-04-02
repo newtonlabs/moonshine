@@ -5,4 +5,11 @@ module ApplicationHelper
     return "iPhone" if request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(iPhone)/]
     return "Desktop"
   end
+  
+  def recipe_results recipes
+    count = recipes.size
+    return "No recipes found..." if count == 0
+    count_text = recipes.size < 20 ? recipes.size : "top 20"
+    "Your #{count_text} recommended recipes: "
+  end
 end

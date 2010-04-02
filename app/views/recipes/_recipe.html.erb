@@ -1,5 +1,5 @@
-<div id="recipes-description">Your top 20 recommended recipes: </div>
-<% @recipes.each do |recipe| %>
+<div id="recipes-description"><%= recipe_results recipes%></div>
+<% recipes.each do |recipe| %>
 <li><span class="drink_name"><a href="#" class="basic-modal" recipe_id="<%= recipe.id %>"><%= recipe.name %></a></span></li>
 <li><%= recipe.quantity %></li><br />
 <% end %>

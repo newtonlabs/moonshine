@@ -70,6 +70,8 @@ ul#topnav span{ /*--Default state of navigation--*/
 #recipes li {list-style-type:none;}
 #recipes a {color: #ffffff;}
 
+#recipes-description {background:url(../images/recipe_bg.jpg) no-repeat}
+
 .contact_us {color: #FFFFFF; min-height:150px; width:800px; padding: 10px 0 0 10px;}
 .contact_us a {color: #ffffff;}
 

@@ -55,7 +55,7 @@ ul#topnav a{ /*--This is basically the hover state of navigation--*/
 ul#topnav span{ /*--Default state of navigation--*/
 	background-position: left top;
 }
-#add_ingredients {width: 960px; height: 111px; margin: 0 0 0 0;outline: 1px solid red;}
+#add_ingredients {width: 960px; height: 111px; margin: 0 0 0 0; outline: 1px solid red;background-image: url(../images/add_ingredient_bg.jpg); background-repeat:no-repeat;}
 #add_text{float: left; height: 25px width: 300px; color: #FFFFFF; font-size: 16px;margin: 0 20px 0 0;}
 #ingredients {min-height:75px; width:800px;margin:0 0 0 0;padding:5px 0 0 0;}
 #ingredients ul {padding-left: 5px;}

@@ -68,7 +68,7 @@ ul#topnav span{ /*--Default state of navigation--*/
 
 .drink_name {color: #FFFFFF;margin: 0 0 5px 0;}
 #recipes {color: #FFFFFF; min-height:150px; width:800px; padding: 10px 0 0 10px;}
-#recipes li {list-style-type:none;}
+#recipes li {list-style-type:none; margin: 0 0 5px 0;}
 #recipes a {color: #ffffff;}
 
 #recipes-description {height: 60px; width: 375px; margin:5px 0 5px 0; padding: 10px 0 0 0;font-weight: bold;}

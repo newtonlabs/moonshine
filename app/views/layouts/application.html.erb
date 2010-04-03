@@ -20,8 +20,8 @@
 <body>
   <div id="wrapper">
     <div id="banner_top">
+      <div id="add_ingredients">Add your ingredients</div>
      <div id="search_wrap">
-       <div id="add_ingredients">Add your ingredients</div>
         <% @ingredient = Ingredient.new%>
         <% form_for(@ingredient) do |f| %>
           <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 

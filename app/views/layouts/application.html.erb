@@ -20,7 +20,14 @@
 <body>
   <div id="wrapper">
     <div id="banner_top">
-
+     <div id="search_wrap">
+        <% @ingredient = Ingredient.new%>
+        <% form_for(@ingredient) do |f| %>
+          <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 
+          <input type=checkbox name="show_all" checked>
+        <% end %>
+      </div><!--end search wrap-->
+      <div class="clear"></div>
       <div id="nav">
         <ul id="topnav">
           <li><%= link_to 'Home', :controller=>"home", :action => "index"   %></li>

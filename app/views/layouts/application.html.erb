@@ -19,10 +19,13 @@
 </head>
 <body>
   <div id="wrapper">
-    <div id="banner_top"></div><!--end banner top-->
-      <div id="add_ingredients">
-          
-    
+    <div id="banner_top">
+      <div id="search_wrap">
+        <% @ingredient = Ingredient.new%>
+        <% form_for(@ingredient) do |f| %>
+          <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 
+        <% end %>
+      </div><!--end search wrap-->
       <div class="clear"></div>
       <div id="nav">
         <ul id="topnav">
@@ -30,7 +33,7 @@
           <li><%= link_to 'Contact', :controller=>"contact", :action=>"index" %></li>
         </ul>
       </div><!--end nav-->
-    </div><!--end add ingredients-->
+    </div><!--end banner top-->
     <div id="clear"></div>
     <div id="bottom_bg">
       <%=yield%>

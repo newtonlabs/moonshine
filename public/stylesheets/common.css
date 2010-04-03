@@ -10,7 +10,7 @@ h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.0em; color:#
 .clear {clear: both;}
 
 #wrapper {width: 960px; margin: 0 auto; background-color: #070709; border: 2px solid #727274; }
-#banner_top {background-image:url(../images/header3.jpg); margin: 0; height: 279px; padding-top:100px;}
+#banner_top {background-image:url(../images/header3.jpg) background-repeat: no-repeat; margin: 0; height: 171px;}
 #search_wrap {float:right; height: 25px; width: 330px; margin: 10px 10px 0 0;}
 #your_shelf {color: #ffffff;}
 

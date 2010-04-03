@@ -11,7 +11,7 @@ h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.0em; color:#
 
 #wrapper {width: 960px; margin: 0 auto; background-color: #070709; border: 2px solid #727274; }
 #banner_top {background-image:url(../images/header3.jpg); margin: 0; height: 279px;}
-#search_wrap {float:right; height: 25px; width: 330px; margin: 200px 10px 0 0;}
+#search_wrap {float:right; height: 25px; width: 330px; margin: 10px 10px 0 0;}
 #your_shelf {color: #ffffff;}
 
 #nav {background: url(../images/a_bg.gif) repeat-x; width: 845px;
@@ -55,7 +55,8 @@ ul#topnav a{ /*--This is basically the hover state of navigation--*/
 ul#topnav span{ /*--Default state of navigation--*/
 	background-position: left top;
 }
-#add_ingredients {float: left; height: 25px width: 300px; color: #FFFFFF; font-size: 16px;}
+#add_ingredients {width: 850px; height: 26px;}
+ #add_text{float: left; height: 25px width: 300px; color: #FFFFFF; font-size: 16px;}
 #ingredients {min-height:75px; width:800px;margin:0 0 0 0;padding:5px 0 0 0;}
 #ingredients ul {padding-left: 5px;}
 #ingredients li {width: 210px; height: 25px; padding:10px; margin: 5px 5px 5px 5px;

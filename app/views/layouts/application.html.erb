@@ -7,7 +7,7 @@
 <% elsif mobile_user_agent.eql?"iPhone" %>
 <title> Off the Shelf iPhone</title>
 <% else %>
-    <title>Off the Shelf</title>
+    <title> <%= yield :title%> Off the Shelf </title>
     <%= javascript_include_tag 'jquery-1.4.2.min.js'%>
     <%= javascript_include_tag 'jquery.autocomplete.js' %>
     <%= javascript_include_tag 'application.js' %>
@@ -34,7 +34,13 @@
     <div id="bottom_bg">
       <%=yield%>
     </div><!--end bottom_bg--> 
-    <div id="footer"></div><!--end footer-->
+    <div id="footer">
+      <!-- 
+      <a name="fb_share" type="icon_link" share_url="http://moonshine.heroku.com" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+      <a href="http://www.facebook.com/sharer.php?u=http://moonshine.heroku.com">Share</a>
+      </div>
+      -->
+      <!--end footer-->
   </div><!--end wrapper-->     
   
   <script type="text/javascript">

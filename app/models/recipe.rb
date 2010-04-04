@@ -8,7 +8,7 @@ class Recipe < ActiveRecord::Base
         :joins => :recipes_ingredients,
         :group => "recipes.name, recipes.id, recipes.quantity",
         :having => ["count(*) >= 1"],
-        :order => ["count(*) DESC"],
+        :order => ["count(*) DESC, recipes.name ASC"],
         :limit => 20
     )
   end
@@ -19,7 +19,7 @@ class Recipe < ActiveRecord::Base
         :joins => :recipes_ingredients,
         :group => "recipes.name, recipes.id, recipes.quantity",
         :having => ["count(*) = #{ingredient_ids.size}"],
-        :order => ["count(*) DESC"],
+        :order => ["count(*) DESC, recipes.name ASC"],
         :limit => 20
     )
   end

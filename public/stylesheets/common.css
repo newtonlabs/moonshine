@@ -14,7 +14,7 @@ h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.0em; color:#
 #search_wrap {float:right; height: 25px; width: 330px; margin: 12px 10px 0 0;}
 #exact {color:#ffffff;float:left;height: 20px; width: 600px; margin: 5px 0 0 20px;}
 #check {height:15px; width: 15px; float: left;margin: 5px 0 0 0;}
-#filter_results {height: 30px;}
+#filter_results {height: 30px;margin: 10px 0 0 0;}
 #your_shelf {color: #ffffff;}
 
 #nav {background: url(../images/a_bg.gif) repeat-x; width: 845px;

@@ -2,7 +2,6 @@
 <div id="search_wrap">
   <% @ingredient = Ingredient.new%>
   <% form_for(@ingredient) do |f| %>
-    <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 
-    
+    <%= f.text_field :name, :autocomplete =>"off", :size => nil %>  
   <% end %>
 </div><!--end search wrap-->

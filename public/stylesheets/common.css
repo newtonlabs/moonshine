@@ -12,6 +12,9 @@ h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.0em; color:#
 #wrapper {width: 960px; margin: 0 auto; background-color: #070709; border: 2px solid #727274; }
 #banner_top {background-image:url(../images/header3.jpg); margin: 0; height: 171px;}
 #search_wrap {float:right; height: 25px; width: 330px; margin: 20px 10px 0 0;}
+#exact {color:#ffffff;float:left;height: 20px; width: 400px; margin: 5px 0 0 20px;}
+#check {height:15px; width: 15px; float: left;margin: 5px 0 0 0;}
+#filter_results {height: 30px;}
 #your_shelf {color: #ffffff;}
 
 #nav {background: url(../images/a_bg.gif) repeat-x; width: 845px;

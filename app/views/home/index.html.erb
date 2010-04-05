@@ -1,3 +1,11 @@
+<% content_for :search_bar do %>
+  <%= render :partial => 'search_bar' %>
+<% end %>
+<div id="filter_results">
+  <div id="check"><input type=checkbox name="show_all"></div>
+  <div id="exact">Only show drinks that contain all the ingredients you have
+  added.</div>
+</div>
 <div class="clear"></div>
 <div id="ingredients"><ul></ul></div>
 <div class="clear"></div>

@@ -7,38 +7,40 @@
 <% elsif mobile_user_agent.eql?"iPhone" %>
 <title> Off the Shelf iPhone</title>
 <% else %>
-    <title>Off the Shelf</title>
+    <title> <%= yield :title%> Off the Shelf </title>
     <%= javascript_include_tag 'jquery-1.4.2.min.js'%>
     <%= javascript_include_tag 'jquery.autocomplete.js' %>
     <%= javascript_include_tag 'application.js' %>
     <%= javascript_include_tag 'jquery.simplemodal-1.3.4.js'%>
     <%= stylesheet_link_tag 'common' %>
     <%= stylesheet_link_tag 'jquery.autocomplete.css' %>
-    <%= stylesheet_link_tag 'basic.css' %>
+    <%= stylesheet_link_tag 'basic.css'%>
 <%  end %>
 </head>
 <body>
   <div id="wrapper">
-    <div id="banner_top">
-      <div id="search_wrap">
-        <% @ingredient = Ingredient.new%>
-        <% form_for(@ingredient) do |f| %>
-          <%= f.text_field :name, :autocomplete =>"off", :size => nil %> 
-        <% end %>
-      </div><!--end search wrap-->
+    <div id="banner_top"></div><!--end banner top-->
+      <div id="add_ingredients">
       <div class="clear"></div>
+       <%= yield :search_bar %>
       <div id="nav">
         <ul id="topnav">
           <li><%= link_to 'Home', :controller=>"home", :action => "index"   %></li>
           <li><%= link_to 'Contact', :controller=>"contact", :action=>"index" %></li>
         </ul>
       </div><!--end nav-->
-    </div><!--end banner top-->
+    </div><!--end add ingredients-->
     <div id="clear"></div>
     <div id="bottom_bg">
       <%=yield%>
     </div><!--end bottom_bg--> 
-    <div id="footer"></div><!--end footer-->
+    <div id="footer">
+      <!-- 
+      <a name="fb_share" type="icon_link" share_url="http://moonshine.heroku.com" href="http://www.facebook.com/sharer.php">Share</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+      <a href="http://www.facebook.com/sharer.php?u=http://moonshine.heroku.com">Share</a>
+      </div>
+      -->
+      <!--end footer-->
   </div><!--end wrapper-->     
   
   <script type="text/javascript">

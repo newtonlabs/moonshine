@@ -45,7 +45,8 @@ $(document).ready(function() {
 	
 	function getParamStr (paramObj) {
 	  pStr = "";
-	  for (var i in paramObj) {pStr += i + "&"}
+	  for (var i in paramObj) {pStr += i + "&"};
+	  pStr += "show_all=" + $('input[name=show_all]').is(':checked')
 	  return pStr;
 	}
   
@@ -65,6 +66,10 @@ $(document).ready(function() {
 	}
 	
 	$("#ingredient_name").focus();
+	
+	$('input[name=show_all]').click(function() {
+	  calculateRecipes();
+	})
 	
 	$("div#ingredients a").live('click', function(e) {
     removeIngredient(this);

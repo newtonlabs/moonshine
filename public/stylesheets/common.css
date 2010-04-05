@@ -10,12 +10,16 @@ h2 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size:1.0em; color:#
 .clear {clear: both;}
 
 #wrapper {width: 960px; margin: 0 auto; background-color: #070709; border: 2px solid #727274; }
-#banner_top {background-image:url(../images/header2.jpg); margin: 0; height: 279px;}
-#search_wrap {float:right; height: 25px; width: 330px; margin: 200px 10px 0 0;}
+#banner_top {background-image:url(../images/header3.jpg); margin: 0; height: 171px;}
+#search_wrap {float:right; height: 25px; width: 220px; margin: 12px 5px 0 0;}
+.new_ingredient {width: 200px;}
+#exact {color:#ffffff;float:left;height: 20px; width: 600px; margin: 5px 0 0 20px;}
+#check {height:15px; width: 15px; float: left;margin: 5px 0 0 0;}
+#filter_results {height: 30px;padding: 10px 0 0 0;}
 #your_shelf {color: #ffffff;}
 
 #nav {background: url(../images/a_bg.gif) repeat-x; width: 845px;
-height: 55px; margin: 15px 0 10px 60px;}
+height: 40px; margin: 59px 0 10px 60px;}
 
 ul#topnav {
 	margin:0 0 0 20px;
@@ -55,19 +59,24 @@ ul#topnav a{ /*--This is basically the hover state of navigation--*/
 ul#topnav span{ /*--Default state of navigation--*/
 	background-position: left top;
 }
-
-#ingredients {min-height:75px; width:800px;margin:0 0 10px 0;padding:25px 0 0 0;}
-#ingredients li { min-width: 75px; height: 25px; padding:10px; margin: 0px 5px 15px 5px;
+#add_ingredients {width: 960px; height: 100px; margin: 0 0 0 0;background-image: url(../images/add_ingredient_bg.jpg); background-repeat:no-repeat; padding: 10px 0 0 0;}
+#add_text{float: left; height: 25px width: 300px; color: #FFFFFF; font-size: 18px;margin: 0 0 0 530px;}
+.small_text{float: left; height: 25px width: 300px; color: #FFFFFF; font-size: 10px;margin: 7px 0 0 355px;}
+#ingredients {min-height:75px; width:800px;margin:0 0 0 0;padding:5px 0 0 0;}
+#ingredients ul {padding-left: 5px;}
+#ingredients li {width: 210px; height: 25px; padding:10px; margin: 5px 5px 5px 5px;
                  float: left; list-style-type:none; background-image: url(../images/ingredient_bg.jpg); background-repeat:repeat-x; border-style:solid; border-width: 1px;border-color: #575555;}
 /* #ingredients a {color: #8c1c1c;} */
 /*#ingredients a*/
-.remove_ingredient  {background:url(../images/x.png) no-repeat;  position:relative; left:70px; 
-	bottom:45px; text-decoration: none; z-index: 1000; padding: 15px; height: 20px; width: 20px;}
+.remove_ingredient  {background:url(../images/x.png) no-repeat;  /*position:relative; right:10px; 
+	bottom:45px;*/ float: right; text-decoration: none; z-index: 1000;padding: 0 4px 5px 0; height: 20px; width: 20px;}
 
-.drink_name {color: #FFFFFF;}
+.drink_name {color: #FFFFFF;margin: 0 0 5px 0;}
 #recipes {color: #FFFFFF; min-height:150px; width:800px; padding: 10px 0 0 10px;}
-#recipes li {list-style-type:none;}
+#recipes li {list-style-type:none; margin: 0 0 5px 0;}
 #recipes a {color: #ffffff;}
+
+#recipes-description {height: 60px; width: 375px; margin:5px 0 5px 0; padding: 10px 0 0 0;font-weight: bold;}
 
 .contact_us {color: #FFFFFF; min-height:150px; width:800px; padding: 10px 0 0 10px;}
 .contact_us a {color: #ffffff;}

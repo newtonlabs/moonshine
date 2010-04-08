@@ -3,7 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-
+<!--[if IE 6]>
+      <%= stylesheet_link_tag 'ie6.css' %>
+<![endif]-->
 <% if mobile_user_agent.eql?"BlackBerry" -%>
 <title> Off the Shelf Blackberry</title>
 <% elsif mobile_user_agent.eql?"iPhone" %>
@@ -17,9 +19,6 @@
     <%= stylesheet_link_tag 'common' %>
     <%= stylesheet_link_tag 'jquery.autocomplete.css' %>
     <%= stylesheet_link_tag 'basic.css'%>
-    <!--[if IE 6]>
-          <%= stylesheet_link_tag 'ie6.css' %>
-    <![endif]-->
 <%  end %>
 
 </head>

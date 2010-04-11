@@ -56,9 +56,7 @@ ul#topnav a{ /*--This is basically the hover state of navigation--*/
 	color: #555;
 	background-position: left bottom;
 }
-ul#topnav span{ /*--Default state of navigation--*/
-	background-position: left top;
-}
+ul#topnav span{ /*--Default state of navigation--*/ background-position: left top;}
 #add_ingredients {width: 960px; height: 100px; margin: 0 0 0 0;background-image: url(../images/add_ingredient_bg.jpg); background-repeat:no-repeat; padding: 10px 0 0 0;}
 #add_text{float: left; height: 25px width: 300px; color: #FFFFFF; font-size: 18px;margin: 0 0 0 530px;}
 .small_text{float: left; height: 25px width: 300px; color: #FFFFFF; font-size: 10px;margin: 7px 0 0 355px;}
@@ -70,7 +68,7 @@ ul#topnav span{ /*--Default state of navigation--*/
 /*#ingredients a*/
 .remove_ingredient  {background:url(../images/x.png) no-repeat;  /*position:relative; right:10px; 
 	bottom:45px;*/ float: right; text-decoration: none; z-index: 1000;padding: 0 4px 5px 0; height: 20px; width: 20px;}
-
+#facebook {float:right; height: 30px; width: 40px; background: #000000;margin: 0 20px 0 0;}
 .drink_name {color: #FFFFFF;margin: 0 0 5px 0;}
 #recipes {color: #FFFFFF; min-height:150px; width:800px; padding: 10px 0 0 10px;}
 #recipes li {list-style-type:none; margin: 0 0 5px 0;}

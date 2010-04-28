@@ -100,6 +100,7 @@ $(document).ready(function() {
      selectFirst: true,
      cacheLength: null,
      matchSubset: false,
+     max: 20,
      parse: function(data) {
        return $.map(data, function(row) {        
          return {

@@ -5,6 +5,8 @@ OddIngredients.all.each do |odd_recipe|
   ingredients.each do |ingredient|
     recipe_ingredients << Ingredient.find_or_create_by_name(ingredient)
   end
+  
+  recipe_ingredients.uniq!
 
   recipe = Recipe.find_or_create_by_name(odd_recipe.name)
   
